@@ -24,4 +24,4 @@ If the --unzip argument is present, the program will create a directory for each
 This is not an exhaustive method to retrieve every artifact on Azure DevOps. There’s a lot more to be done to make this a complete solution. As it is, it will only retrieve the files from the last commit of the default — usually Master — branch. However, it’s a good starting point to backup Azure DevOps projects and keep a local repository of these.
 
 
-More info on https://medium.com/@bernardo_alves/azure-devops-api-backup-a14caa5d2fc7
+More info on https://medium.com/devopslinks/azure-devops-api-backup-a14caa5d2fc7
