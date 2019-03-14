@@ -47,7 +47,7 @@ namespace AzureDevOpsBackup
             if (args.Intersect(requiredArgs).Count() == 3)
             {
                 const string version = "api-version=5.1-preview.1";
-                string auth = "Basic " + args[Array.IndexOf(args, "--token") + 1];
+                string auth = "Basic " + Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes(string.Format("{0}:{1}", "", args[Array.IndexOf(args, "--token") + 1])));
                 string baseURL = "https://dev.azure.com/" + args[Array.IndexOf(args, "--organization") + 1] + "/";
                 string outDir = args[Array.IndexOf(args, "--outdir") + 1] + "\\";
                 var clientProjects = new RestClient(baseURL + "_apis/projects?" + version);
